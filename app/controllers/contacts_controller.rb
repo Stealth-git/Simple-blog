@@ -8,7 +8,7 @@ class ContactsController < ApplicationController
       @contact.save
     else
       # возвращаем форму через action: 'new'
-      render action: 'new'
+      render action: "new"
 
     end
   end
