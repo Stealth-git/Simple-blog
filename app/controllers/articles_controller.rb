@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     if @article.valid?
       @article.save
+      redirect_to @article
     else
       # возвращаем форму через action: 'new'
       render action: "new"
