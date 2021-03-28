@@ -3,6 +3,10 @@ class ArticlesController < ApplicationController
   def new
   end
 
+  def show
+    @article = Article.find(params[:id])
+  end
+
   def create
     # вывод хеша params[:article] на экран 
     # render plain: params[:article].inspect
