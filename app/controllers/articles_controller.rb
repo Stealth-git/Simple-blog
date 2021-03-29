@@ -29,16 +29,23 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-    def update
-    @article = Article.find(params[:id])
+  def update
+  @article = Article.find(params[:id])
 
     if @article.update(article_params)
       redirect_to @article
     else
-      # возвращаем форму через action: 'new'
+      # возвращаем форму через action: 'edit'
       render action: "edit"
 
     end
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+
+    redirect_to articles_path
   end
 
   private
