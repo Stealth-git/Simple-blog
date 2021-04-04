@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
 
+  before_action :authenticate_user!
+
   def index
     @articles = Article.all
   end
@@ -9,6 +11,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
+
   end
 
   def create
