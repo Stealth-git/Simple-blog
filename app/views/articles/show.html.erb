@@ -9,7 +9,7 @@
 
 <p>
   <% @article.comments.each do |comment| %>
-    <b>Name author: </b><%= current_user.username %>
+    <b>Name author: </b><%= comment.author %>
     <br />
     <b>Text: </b><%= comment.body %>
     <br />
