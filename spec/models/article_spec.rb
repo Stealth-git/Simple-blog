@@ -6,6 +6,11 @@ describe Article do
     it { should validate_presence_of :text }
   end
 
+  describe "lengths" do
+    it { should validate_length_of :title }
+    it { should validate_length_of :text }
+  end
+
   describe "associations" do
     it { should have_many :comments }
   end
